@@ -16,17 +16,26 @@ export default function BookList({ books, deleteBook, updateBook }: Props) {
   return (
     <div>
       {books.length === 0 && <p>Chưa có sách nào</p>}
-      <ul className="">
+      <ul className="space-y-2">
         {books.map((book) => (
-          <li key={book.id} className="">
+          <li
+            key={book.id}
+            className="flex justify-between items-center border p-3 rounded"
+          >
             <div>
               <strong>{book.title}</strong> - {book.author} ({book.year})
             </div>
-            <div className="">
-              <button className="" onClick={() => setSelectedBook(book)}>
+            <div className="space-x-2">
+              <button
+                className="bg-yellow-500 text-white px-2 py-1 rounded"
+                onClick={() => setSelectedBook(book)}
+              >
                 Update
               </button>
-              <button className="" onClick={() => setDeleteId(book.id)}>
+              <button
+                className="bg-red-500 text-white px-2 py-1 rounded"
+                onClick={() => setDeleteId(book.id)}
+              >
                 Delete
               </button>
             </div>

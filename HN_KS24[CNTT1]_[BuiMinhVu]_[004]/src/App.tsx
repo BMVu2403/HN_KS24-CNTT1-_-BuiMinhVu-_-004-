@@ -28,8 +28,8 @@ function App() {
   };
 
   return (
-    <div className="">
-      <h1 className=""> Quản lý sách</h1>
+    <div className="p-6 max-w-3xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4"> Quản lý sách</h1>
       <BookForm addBook={addBook} />
       <BookList books={books} deleteBook={deleteBook} updateBook={updateBook} />
     </div>

@@ -17,30 +17,33 @@ export default function UpdateModal({ book, onUpdate, onCancel }: Props) {
   };
 
   return (
-    <div className="">
-      <div className="">
-        <h2 className="">Cập nhật sách</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="bg-white p-6 rounded shadow-md">
+        <h2 className="font-bold mb-2">Cập nhật sách</h2>
         <input
-          className=""
+          className="border p-2 w-full mb-2"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
-          className=""
+          className="border p-2 w-full mb-2"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
         <input
-          className=""
+          className="border p-2 w-full mb-2"
           type="number"
           value={year}
           onChange={(e) => setYear(Number(e.target.value))}
         />
-        <div className="">
-          <button className="" onClick={handleUpdate}>
+        <div className="mt-4 space-x-2">
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+            onClick={handleUpdate}
+          >
             Lưu
           </button>
-          <button className="" onClick={onCancel}>
+          <button className="bg-gray-300 px-4 py-2 rounded" onClick={onCancel}>
             Hủy
           </button>
         </div>

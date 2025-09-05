@@ -22,25 +22,27 @@ export default function BookForm({ addBook }: Props) {
   return (
     <form onSubmit={handleSubmit} className="">
       <input
-        className=""
+        className="border p-2 w-full"
         placeholder="Tên sách"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
-        className=""
+        className="border p-2 w-full"
         placeholder="Tác giả"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
       <input
-        className=""
+        className="border p-2 w-full"
         type="number"
         placeholder="Năm xuất bản"
         value={year}
         onChange={(e) => setYear(Number(e.target.value))}
       />
-      <button className="">Thêm sách</button>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded">
+        Thêm sách
+      </button>
     </form>
   );
 }
